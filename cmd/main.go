@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 
 	"ascii-art/internal"
 )
@@ -14,15 +17,30 @@ func main() {
 		return
 	}
 	text := os.Args[1]
+	for _, r := range text {
+		if r < 32 || r > 126 {
+			fmt.Println("Invalid character detected.")
+			os.Exit(1)
+		}
+	}
 	fmt.Println("In which style would you like that?")
 	fmt.Println("1 = Standard")
 	fmt.Println("2 = Shadow")
 	fmt.Println("3 = Thinkertoy")
 
-	var choice int
-	var filename string
-	fmt.Scan(&choice)
+	reader := bufio.NewReader(os.Stdin)
 
+	input, _ := reader.ReadString('\n')
+	input = strings.TrimSpace(input)
+
+	choice, err := strconv.Atoi(input)
+
+	if err != nil || choice < 1 || choice > 3 {
+		fmt.Println("The acceptable input is 1, 2, 3.")
+		os.Exit(1)
+	}
+
+	var filename string
 	switch choice {
 	case 1:
 		filename = "banners/standard.txt"
@@ -30,9 +48,7 @@ func main() {
 		filename = "banners/shadow.txt"
 	case 3:
 		filename = "banners/thinkertoy.txt"
-	default:
-		fmt.Println("The acceptable input is 1, 2, 3.")
-		return
 	}
-	fmt.Printf("%s", internal.PrintAscii(text, filename))
+	lines := strings.Split(text, "\\n")
+	internal.PrintAscii(lines, filename)
 }
