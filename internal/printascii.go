@@ -12,7 +12,7 @@ func PrintAscii(lines []string, filename string) {
 		fmt.Println("Could not open file:", err)
 		os.Exit(1)
 	}
-	bannerLines := strings.Split(string(data), "\n")
+	bannerLines := strings.Split(strings.ReplaceAll(string(data), "\r\n", "\n"), "\n")
 
 	for i := 0; i < len(lines); i++ {
 		if lines[i] == "" {
