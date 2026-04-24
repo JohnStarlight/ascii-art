@@ -13,7 +13,8 @@ import (
 func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("The correct usage of this program is:")
-		fmt.Println("go run . \"your-text-here\"")
+		fmt.Println("  1. Navigate to the project root directory")
+		fmt.Println("  2. Run: go run ./cmd \"your-text-here\"")
 		return
 	}
 
@@ -23,7 +24,7 @@ func main() {
 	// Reject anything outside that range (e.g. accented letters, emoji).
 	for _, r := range text {
 		if r < 32 || r > 126 {
-			fmt.Println("Invalid character detected.")
+			fmt.Printf("Invalid character detected: %q (only printable ASCII is supported)\n", r)
 			os.Exit(1)
 		}
 	}
@@ -39,7 +40,7 @@ func main() {
 
 	choice, err := strconv.Atoi(input)
 	if err != nil || choice < 1 || choice > 3 {
-		fmt.Println("The acceptable input is 1, 2, 3.")
+		fmt.Println("Invalid choice. Please enter \"1\" for Standard, \"2\" for Shadow or \"3\" for Thinkertoy.")
 		os.Exit(1)
 	}
 
