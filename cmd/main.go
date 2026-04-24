@@ -16,25 +16,28 @@ func main() {
 		fmt.Println("go run . \"your-text-here\"")
 		return
 	}
+
 	text := os.Args[1]
+
+	// Only printable ASCII characters (32–126) are supported.
+	// Reject anything outside that range (e.g. accented letters, emoji).
 	for _, r := range text {
 		if r < 32 || r > 126 {
 			fmt.Println("Invalid character detected.")
 			os.Exit(1)
 		}
 	}
+
 	fmt.Println("In which style would you like that?")
 	fmt.Println("1 = Standard")
 	fmt.Println("2 = Shadow")
 	fmt.Println("3 = Thinkertoy")
 
 	reader := bufio.NewReader(os.Stdin)
-
 	input, _ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
 
 	choice, err := strconv.Atoi(input)
-
 	if err != nil || choice < 1 || choice > 3 {
 		fmt.Println("The acceptable input is 1, 2, 3.")
 		os.Exit(1)
@@ -49,6 +52,10 @@ func main() {
 	case 3:
 		filename = "banners/thinkertoy.txt"
 	}
+
+	// Split on the literal two-character sequence "\n" (backslash + n),
+	// which is how multi-line input is passed from the command line.
+	// e.g. "Hello\nThere" becomes ["Hello", "There"].
 	lines := strings.Split(text, "\\n")
 	internal.PrintAscii(lines, filename)
 }
