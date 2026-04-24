@@ -16,7 +16,9 @@ func PrintAscii(lines []string, filename string) {
 
 	for i := 0; i < len(lines); i++ {
 		if lines[i] == "" {
-			fmt.Println()
+			if i > 0 {
+				fmt.Println()
+			}
 			continue
 		}
 		for row := 1; row <= 8; row++ {
