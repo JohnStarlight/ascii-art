@@ -25,11 +25,11 @@ func main() {
 
 	switch choice {
 	case 1:
-		filename = "standard.txt"
+		filename = "banners/standard.txt"
 	case 2:
-		filename = "shadow.txt"
+		filename = "banners/shadow.txt"
 	case 3:
-		filename = "thinkertoy.txt"
+		filename = "banners/thinkertoy.txt"
 	default:
 		fmt.Println("The acceptable input is 1, 2, 3.")
 		return
