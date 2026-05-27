@@ -1,0 +1,149 @@
+{
+  "cli_version": "0.6.2",
+  "checkpoint_id": "06ec23392570",
+  "session_id": "f7b66966-d7d6-4b43-9dd8-48cf3b8833c0",
+  "strategy": "manual-commit",
+  "created_at": "2026-05-27T16:28:04.267141Z",
+  "branch": "test",
+  "checkpoints_count": 4,
+  "files_touched": [
+    "hello-entire.md"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-4-6",
+  "turn_id": "ddaf99e53c27",
+  "token_usage": {
+    "input_tokens": 18,
+    "cache_creation_tokens": 7043,
+    "cache_read_tokens": 144927,
+    "output_tokens": 623,
+    "api_call_count": 8
+  },
+  "session_metrics": {
+    "turn_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-05-27T16:28:04.255859Z",
+    "agent_lines": 3,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 3,
+    "total_lines_changed": 3,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 3290,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "ascii-art/.github/workflows/ci.yml": 32,
+        "ascii-art/LICENSE": 18,
+        "ascii-art/PRD.md": 124,
+        "ascii-art/README.md": 102,
+        "ascii-art/TASK_CARDS.md": 89,
+        "ascii-art/banners/shadow.txt": 855,
+        "ascii-art/banners/standard.txt": 855,
+        "ascii-art/banners/thinkertoy.txt": 855,
+        "ascii-art/cmd/main.go": 63,
+        "ascii-art/go.mod": 3,
+        "ascii-art/internal/printascii.go": 59,
+        "ascii-art/test/audit_examples_test.go": 148,
+        "ascii-art/test/printascii_test.go": 87
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 3290,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "ascii-art/.github/workflows/ci.yml": 32,
+        "ascii-art/LICENSE": 18,
+        "ascii-art/PRD.md": 124,
+        "ascii-art/README.md": 102,
+        "ascii-art/TASK_CARDS.md": 89,
+        "ascii-art/banners/shadow.txt": 855,
+        "ascii-art/banners/standard.txt": 855,
+        "ascii-art/banners/thinkertoy.txt": 855,
+        "ascii-art/cmd/main.go": 63,
+        "ascii-art/go.mod": 3,
+        "ascii-art/internal/printascii.go": 59,
+        "ascii-art/test/audit_examples_test.go": 148,
+        "ascii-art/test/printascii_test.go": 87
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 3290,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "ascii-art/.github/workflows/ci.yml": 32,
+        "ascii-art/LICENSE": 18,
+        "ascii-art/PRD.md": 124,
+        "ascii-art/README.md": 102,
+        "ascii-art/TASK_CARDS.md": 89,
+        "ascii-art/banners/shadow.txt": 855,
+        "ascii-art/banners/standard.txt": 855,
+        "ascii-art/banners/thinkertoy.txt": 855,
+        "ascii-art/cmd/main.go": 63,
+        "ascii-art/go.mod": 3,
+        "ascii-art/internal/printascii.go": 59,
+        "ascii-art/test/audit_examples_test.go": 148,
+        "ascii-art/test/printascii_test.go": 87
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 3290,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "ascii-art/.github/workflows/ci.yml": 32,
+        "ascii-art/LICENSE": 18,
+        "ascii-art/PRD.md": 124,
+        "ascii-art/README.md": 102,
+        "ascii-art/TASK_CARDS.md": 89,
+        "ascii-art/banners/shadow.txt": 855,
+        "ascii-art/banners/standard.txt": 855,
+        "ascii-art/banners/thinkertoy.txt": 855,
+        "ascii-art/cmd/main.go": 63,
+        "ascii-art/go.mod": 3,
+        "ascii-art/internal/printascii.go": 59,
+        "ascii-art/test/audit_examples_test.go": 148,
+        "ascii-art/test/printascii_test.go": 87
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 3290,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "ascii-art/.github/workflows/ci.yml": 32,
+        "ascii-art/LICENSE": 18,
+        "ascii-art/PRD.md": 124,
+        "ascii-art/README.md": 102,
+        "ascii-art/TASK_CARDS.md": 89,
+        "ascii-art/banners/shadow.txt": 855,
+        "ascii-art/banners/standard.txt": 855,
+        "ascii-art/banners/thinkertoy.txt": 855,
+        "ascii-art/cmd/main.go": 63,
+        "ascii-art/go.mod": 3,
+        "ascii-art/internal/printascii.go": 59,
+        "ascii-art/test/audit_examples_test.go": 148,
+        "ascii-art/test/printascii_test.go": 87
+      }
+    }
+  ]
+}
